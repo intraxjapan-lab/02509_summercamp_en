@@ -24,3 +24,67 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Hide Next.js development indicators */
+[data-next-mark-loading] {
+  display: none !important;
+}
+
+svg[data-next-mark-loading] {
+  display: none !important;
+}
+
+/* Hide any Next.js build activity indicators */
+div[id*="__next"] > div[style*="position: fixed"] {
+  display: none !important;
+}
+
+/* Force hide Next.js loading indicators */
+svg[width="40"][height="40"] {
+  display: none !important;
+}
+
+svg[viewBox="0 0 40 40"] {
+  display: none !important;
+}
+
+/* Hide any SVG with Next.js logo paths */
+svg:has(path[d*="M13.3 15.2"]) {
+  display: none !important;
+}
+
+/* Hide elements with Next.js specific IDs */
+#next_logo_paint0_linear_1357_10853,
+#next_logo_paint1_linear_1357_10853,
+#next_logo_mask0 {
+  display: none !important;
+}
+
+/* Hide parent containers of Next.js indicators */
+div:has(svg[data-next-mark-loading]) {
+  display: none !important;
+}
+
+/* Force hide all Next.js development indicators */
+div[style*="position: fixed"][style*="bottom"][style*="left"] {
+  display: none !important;
+}
+
+div[style*="position: fixed"][style*="z-index"] svg {
+  display: none !important;
+}
+
+/* Hide Next.js build indicator */
+div[data-nextjs-toast-wrapper] {
+  display: none !important;
+}
+
+/* Hide any bottom-left fixed elements */
+div[style*="bottom: 16px"][style*="left: 16px"] {
+  display: none !important;
+}
+
+/* Hide elements containing Next.js N logo */
+*[style*="background-image"][style*="data:image"] {
+  display: none !important;
+}
