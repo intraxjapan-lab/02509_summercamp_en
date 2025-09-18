@@ -229,7 +229,7 @@ export default function Home() {
                   </div>
                   <h3 className="text-3xl font-bold text-white mb-6">EXPERIENCE THE RICH HERITAGE OF TOKYO</h3>
                   <p className="text-blue-100 leading-relaxed text-lg">
-                    Whether it's traditional areas like Asakusa or ultra-modern ones like Akihabara, Tokyo never fails to impress.
+                    Whether it&apos;s traditional areas like Asakusa or ultra-modern ones like Akihabara, Tokyo never fails to impress.
                   </p>
                 </div>
               </div>
@@ -510,7 +510,7 @@ export default function Home() {
                     </div>
                     <div className="border-l-4 border-pink-400 pl-4">
                       <h6 className="font-medium text-pink-600 mb-1">Hongdae</h6>
-                      <p className="text-sm text-gray-600">Seoul's youth district with Korean buddy</p>
+                      <p className="text-sm text-gray-600">Seoul&apos;s youth district with Korean buddy</p>
                     </div>
                     <div className="border-l-4 border-pink-400 pl-4">
                       <h6 className="font-medium text-pink-600 mb-1">Gyeongbokgung Palace</h6>
@@ -554,7 +554,7 @@ export default function Home() {
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h2>
-              <p className="text-lg text-gray-600">Ready to join us? Fill out the form below and we'll get back to you soon!</p>
+              <p className="text-lg text-gray-600">Ready to join us? Fill out the form below and we&apos;ll get back to you soon!</p>
             </div>
 
             <div className="bg-white rounded-2xl shadow-xl p-8">
