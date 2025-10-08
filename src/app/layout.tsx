@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ayusa Summer Camp in Japan 2025 | Ayusa by Intrax",
+  title: "Ayusa Summer Camp in Japan 2026 | Ayusa by Intrax",
   description: "Learn or improve your Japanese and make lifelong friends through an unforgettable 3 weeks in Japan. Japanese language classes, volunteer activities, homestay, school visits and more!",
 };
 
