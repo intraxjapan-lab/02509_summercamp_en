@@ -73,6 +73,7 @@ export default function RootLayout({
             `,
           }}
         />
+        <script src="/contact-form.js" defer></script>
       </body>
     </html>
   );
