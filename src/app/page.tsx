@@ -19,41 +19,59 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-lg transition-all duration-300 ${
-        isScrolled ? 'bg-gradient-to-r from-blue-500/95 to-blue-700/95' : ''
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
       }`}>
-        <div className="w-full px-6 py-3">
-          <div className="flex justify-between items-center max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-3 border border-white/20">
-                <img
-                  src="/Ayusa_Logo_white_w180.png"
-                  alt="Ayusa by Intrax"
-                  className="h-10 w-auto"
-                />
-              </div>
-              <div className="ml-4 hidden lg:block">
-                <h1 className="text-white font-bold text-xl">Summer Camp Japan 2026</h1>
-                <p className="text-blue-200 text-sm">Unforgettable Cultural Experience</p>
-              </div>
+              <img
+                src="/Ayusa_Logo_white_w180.png"
+                alt="Ayusa by Intrax"
+                className={`h-8 w-auto transition-all duration-300 ${
+                  isScrolled ? 'filter brightness-0' : ''
+                }`}
+              />
             </div>
-            <nav className="hidden md:flex items-center">
-              <a href="#contact" className="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-8 py-3 rounded-full font-semibold hover:from-blue-600 hover:to-blue-800 transform hover:scale-105 transition-all duration-300 shadow-lg">
-                Contact Us
+            <nav className="hidden md:flex items-center space-x-10">
+              <a href="#program" className={`text-sm font-normal tracking-wide transition-colors ${
+                isScrolled ? 'text-slate-600 hover:text-blue-600' : 'text-white/90 hover:text-white'
+              }`}>
+                Program
+              </a>
+              <a href="#features" className={`text-sm font-normal tracking-wide transition-colors ${
+                isScrolled ? 'text-slate-600 hover:text-blue-600' : 'text-white/90 hover:text-white'
+              }`}>
+                Features
+              </a>
+              <a href="#Activities" className={`text-sm font-normal tracking-wide transition-colors ${
+                isScrolled ? 'text-slate-600 hover:text-blue-600' : 'text-white/90 hover:text-white'
+              }`}>
+                Activities
+              </a>
+              <a href="#cost" className={`text-sm font-normal tracking-wide transition-colors ${
+                isScrolled ? 'text-slate-600 hover:text-blue-600' : 'text-white/90 hover:text-white'
+              }`}>
+                Details
+              </a>
+              <a href="#contact" className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-md text-sm font-medium transition-all duration-300 tracking-wide">
+                Contact
               </a>
             </nav>
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden text-white hover:text-blue-300 p-2 transition-colors"
+              className={`md:hidden p-2 transition-colors ${
+                isScrolled ? 'text-slate-600 hover:text-blue-600' : 'text-white/90 hover:text-white'
+              }`}
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
               ) : (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
               )}
@@ -65,46 +83,46 @@ export default function Home() {
         <div className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
           isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}>
-          <nav className="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-4 space-y-3">
+          <nav className="bg-white/95 backdrop-blur-md border-t border-slate-200 px-6 py-6 space-y-1">
             <a
               href="#program"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block text-white hover:text-blue-200 py-2 transition-colors"
+              className="block text-slate-600 hover:text-blue-600 py-3 text-sm font-normal tracking-wide transition-colors"
             >
               Program Overview
             </a>
             <a
               href="#features"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block text-white hover:text-blue-200 py-2 transition-colors"
+              className="block text-slate-600 hover:text-blue-600 py-3 text-sm font-normal tracking-wide transition-colors"
             >
               Why Choose Us
             </a>
             <a
               href="#Activities"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block text-white hover:text-blue-200 py-2 transition-colors"
+              className="block text-slate-600 hover:text-blue-600 py-3 text-sm font-normal tracking-wide transition-colors"
             >
               Activities
             </a>
             <a
               href="#cost"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block text-white hover:text-blue-200 py-2 transition-colors"
+              className="block text-slate-600 hover:text-blue-600 py-3 text-sm font-normal tracking-wide transition-colors"
             >
               Program Details
             </a>
             <a
               href="#tours"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block text-white hover:text-blue-200 py-2 transition-colors"
+              className="block text-slate-600 hover:text-blue-600 py-3 text-sm font-normal tracking-wide transition-colors"
             >
               Optional Tours
             </a>
             <a
               href="#contact"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block bg-white text-blue-700 px-6 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors text-center"
+              className="block bg-blue-500 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-600 transition-colors text-center text-sm tracking-wide mt-4"
             >
               Contact Us
             </a>
@@ -112,83 +130,170 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Hero Section with Background */}
-      <div className="relative h-screen flex items-center justify-center text-white">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/mv_sp.jpg')] md:bg-[url('/mv_pc.jpg')]"
-        ></div>
-        <div className="absolute inset-0 bg-black opacity-25"></div>
-        <div className="relative z-10 text-center px-4 sm:px-6">
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight">
-            Ayusa Summer Camp in Japan！
+      {/* Hero Section */}
+      <div className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/mv_pc.jpg"
+            alt="Ayusa Summer Camp in Japan 2026"
+            fill
+            className="object-cover"
+            priority
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-slate-800/50 to-slate-900/70"></div>
+        </div>
+        
+        {/* Content */}
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+          <div className="mb-8">
+            <span className="inline-block bg-blue-500 text-white text-xs font-medium px-4 py-2 rounded-full tracking-wider uppercase">
+              ✨ Summer 2026 Applications Open
+            </span>
+          </div>
+          
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light mb-8 leading-[0.9] tracking-tight">
+            <span className="block font-extralight">Ayusa</span>
+            <span className="block font-normal">Summer Camp</span>
+            <span className="block text-blue-300 font-medium">in Japan</span>
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-3 md:mb-4">
-            June 20－ July 11, 2026
-          </p>
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light mb-6 md:mb-8">
-            Summer Camp in Japan 2026
-          </h2>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-4xl mx-auto leading-relaxed px-2">
+          
+          <div className="mb-10 space-y-4">
+            <p className="text-xl md:text-2xl font-light text-slate-200 tracking-wide">
+              June 20 – July 11, 2026
+            </p>
+            <div className="w-16 h-px bg-blue-400 mx-auto"></div>
+          </div>
+          
+          <p className="text-lg md:text-xl font-light mb-12 max-w-3xl mx-auto leading-relaxed text-slate-100 tracking-wide">
             Learn or improve your Japanese and make lifelong friends through an unforgettable 3 weeks in Japan.
           </p>
+          
+          <div className="hidden sm:flex justify-center">
+            <a 
+              href="#contact" 
+              className="bg-blue-500 hover:bg-blue-600 text-white px-10 py-4 rounded-md font-medium text-base transition-all duration-300 tracking-wide uppercase text-sm"
+            >
+              Apply Now
+            </a>
+          </div>
+        </div>
+        
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+          <div className="w-6 h-10 border border-white rounded-full flex justify-center opacity-60">
+            <div className="w-1 h-2 bg-white rounded-full mt-2 animate-bounce"></div>
+          </div>
         </div>
       </div>
 
       {/* Program Overview Section */}
-      <section id="program" className="bg-gray-800 py-12 md:py-16 lg:py-20">
-        <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start max-w-7xl mx-auto">
-            {/* Left Column - Fee and Discount Info */}
-            <div className="text-white space-y-6 lg:space-y-8">
-              <div className="border-l-4 border-green-500 pl-4 sm:pl-6">
-                <p className="text-lg sm:text-xl mb-2">Program Fee</p>
-                <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-green-400">$4,300</p>
+      <section id="program" className="relative py-20 md:py-24 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/AdobeStock_485686574_Preview.jpeg"
+            alt="Program Overview Background"
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/90 via-slate-800/85 to-slate-900/90"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-light text-white mb-6">Program Overview</h2>
+            <div className="w-20 h-0.5 bg-blue-400 mx-auto"></div>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
+            
+            {/* Left Column - Main Info */}
+            <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+              
+              {/* Program Fee */}
+              <div className="bg-white/95 backdrop-blur-md rounded-2xl p-8 shadow-xl text-center">
+                <p className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-3">Program Fee</p>
+                <p className="text-4xl font-light text-slate-900 mb-2">$4,300</p>
+                <p className="text-sm text-slate-600">All-inclusive package</p>
+                
+                {/* Early Bird Info */}
+                <div className="mt-6 pt-6 border-t border-slate-200">
+                  <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-3 rounded-lg">
+                    <p className="text-sm font-medium mb-1">Early Bird Special</p>
+                    <p className="text-lg font-light text-yellow-300">$500 OFF</p>
+                    <p className="text-xs text-blue-200 mt-1">Apply by Dec 25, 2025</p>
+                  </div>
+                </div>
               </div>
-
-              <div className="bg-gray-700/50 rounded-lg p-4 sm:p-6 space-y-3">
-                <p className="text-red-400 font-semibold text-base sm:text-lg">
-                  Get <span className="font-bold text-xl">$500 discount</span>
-                </p>
-                <p className="text-sm sm:text-base">
-                  by applying by December 25th, 2025!
-                </p>
-                <p className="text-xs sm:text-sm text-gray-300">
-                  *The discount is applicable only to those who have paid the full amount.
-                </p>
+              
+              {/* Program Details */}
+              <div className="bg-white/95 backdrop-blur-md rounded-2xl p-8 shadow-xl">
+                <div className="space-y-6">
+                  <div className="text-center">
+                    <p className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-3">Program Dates</p>
+                    <p className="text-2xl font-light text-slate-900 mb-1">June 20 – July 11</p>
+                    <p className="text-base text-slate-700">2026</p>
+                    <p className="text-sm text-slate-500 mt-2">(3 weeks intensive)</p>
+                  </div>
+                  
+                  <div className="pt-6 border-t border-slate-200 text-center">
+                    <p className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-3">Eligibility</p>
+                    <p className="text-lg font-medium text-slate-900 mb-2">Ages 15-19</p>
+                    <div className="inline-block bg-blue-50 text-blue-700 px-3 py-2 rounded-full text-sm font-medium">
+                      No Japanese Required
+                    </div>
+                  </div>
+                </div>
               </div>
-
-              <div className="pt-6 border-t border-gray-600">
-                <p className="text-gray-400 mb-2 text-sm sm:text-base uppercase tracking-wide">Deadline</p>
-                <p className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2 text-red-400">April 01, 2026</p>
-                <p className="text-xs sm:text-sm text-gray-400">* Sign-ups will close as soon as tour capacity has been reached.</p>
-              </div>
+              
             </div>
 
-            {/* Middle Column - Dates and Eligibility */}
-            <div className="text-white space-y-6 lg:space-y-8 lg:pl-8 lg:border-l lg:border-gray-600">
-              <div className="bg-gray-700/30 rounded-lg p-4 sm:p-6">
-                <p className="text-gray-400 mb-3 text-sm sm:text-base uppercase tracking-wide">— Dates</p>
-                <p className="text-base sm:text-lg lg:text-xl font-semibold">June 20 – July 11, 2026</p>
-                <p className="text-sm sm:text-base text-gray-300">(3 weeks)</p>
+            {/* Right Column - Application & CTA */}
+            <div className="space-y-6">
+              
+              {/* Application Deadline */}
+              <div className="bg-white/95 backdrop-blur-md rounded-2xl p-8 shadow-xl text-center">
+                <p className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-3">Application Deadline</p>
+                <p className="text-3xl font-light text-slate-900 mb-2">April 01</p>
+                <p className="text-base text-slate-700 mb-4">2026</p>
+                <div className="bg-red-50 text-red-700 px-4 py-3 rounded-lg text-sm">
+                  Limited spots available!
+                </div>
               </div>
-
-              <div className="bg-gray-700/30 rounded-lg p-4 sm:p-6">
-                <p className="text-gray-400 mb-3 text-sm sm:text-base uppercase tracking-wide">— Eligibility</p>
-                <p className="text-base sm:text-lg font-semibold mb-2">15-19 years old at time of program</p>
-                <p className="text-base sm:text-lg font-semibold text-blue-300">No Japanese language requirement</p>
+              
+              {/* CTA */}
+              <div className="relative overflow-hidden rounded-2xl shadow-xl">
+                <div className="absolute inset-0">
+                  <Image
+                    src="/pict01.png"
+                    alt="Contact Background"
+                    fill
+                    className="object-cover"
+                    sizes="400px"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 to-blue-700/80"></div>
+                </div>
+                <a 
+                  href="#contact" 
+                  className="relative z-10 block text-white p-8 text-center transition-all duration-300 hover:bg-white/10"
+                >
+                  <p className="text-xl font-medium mb-2">Ready to Apply?</p>
+                  <p className="text-sm text-blue-100 mb-4">Start your Japan adventure</p>
+                  <div className="inline-flex items-center text-sm font-medium bg-white/20 px-4 py-2 rounded-full">
+                    Contact Us
+                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                  </div>
+                </a>
               </div>
+              
             </div>
-
-            {/* Right Column - Contact Button */}
-            <div className="flex justify-center lg:justify-end">
-              <a href="#contact" className="bg-green-500 hover:bg-green-600 text-white px-6 sm:px-8 lg:px-12 py-6 lg:py-8 rounded-xl text-center transition-all duration-300 shadow-xl w-full sm:w-auto max-w-sm hover:scale-105 transform">
-                <p className="text-lg sm:text-xl lg:text-2xl font-bold mb-1 sm:mb-2">Contact Us for</p>
-                <p className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 lg:mb-4">More Info</p>
-                <svg className="w-6 h-6 lg:w-8 lg:h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"/>
-                </svg>
-              </a>
-            </div>
+            
           </div>
         </div>
       </section>
